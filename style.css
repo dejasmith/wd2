@@ -1,23 +1,23 @@
 body {
   background: linear-gradient(to right, lightgreen, teal);
 }
-.header{
+header{
 background-color: red;
 grid-area: header;
 }
 
-.nav{
-background-color: blue;
+nav{
+background:rgba(0,0,0,.2);
 grid-area: nav;
 }
 
-.main{
-background-color: yellow;
+main{
+background:rgba(0,0,0,.2);
 grid-area: main;
 }
 
-.footer{
-background-color: purple;
+footer{
+background:rgba(0,0,0,.2);
 grid-area: footer;
 }
 

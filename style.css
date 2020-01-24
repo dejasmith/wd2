@@ -4,8 +4,16 @@ body {
   margin:0;
 }
 header{
-background-color: red;
+background:rgba(0,0,0,.2);
 grid-area: header;
+}
+header h1{
+color:mediumspringgreen; 
+text-shadow: 2px 2px 5px navy;
+}
+
+header h3{
+color:navy;
 }
 
 nav{
@@ -38,26 +46,16 @@ background:rgba(0,0,0,.2);
 grid-area: main;
 }
 
-footer{
-background:rgba(0,0,0,.2);
-grid-area: footer;
-}
-
-header h1{
-color:mediumspringgreen; 
-text-shadow: 2px 2px 5px navy;
-}
-
-header h3{
-color:navy;
-}
-
 main h2{
   color: navy;
 }
 
 main p{
   color: white;
+}
+footer{
+background:rgba(0,0,0,.2);
+grid-area: footer;
 }
 
 footer p{

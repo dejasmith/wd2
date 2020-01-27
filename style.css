@@ -6,6 +6,7 @@ body {
 header{
 background:rgba(0,0,0,.2);
 grid-area: header;
+text-align:center;
 }
 header h1{
 color:mediumspringgreen; 
@@ -47,7 +48,8 @@ grid-area: main;
 }
 
 main h2{
-  color: navy;
+  color: navy
+  text-align:center;
 }
 
 main p{

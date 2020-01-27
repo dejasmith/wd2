@@ -45,6 +45,7 @@ a:hover {
 main{
 background:rgba(0,0,0,.2);
 grid-area: main;
+padding:5px;
 }
 
 main h2{

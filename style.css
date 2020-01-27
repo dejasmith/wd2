@@ -63,6 +63,7 @@ grid-area: footer;
 
 footer p{
   color: white;
+  text-align:center;
 }
 
 .container1 { /*for index.html*/

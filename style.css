@@ -67,6 +67,9 @@ footer p{
   margin: 0;
 }
 
+aside{
+grid-area: aside;
+}
 .container1 { /*for index.html*/
   display: grid;
   grid-template-columns:auto 1fr;

@@ -70,6 +70,7 @@ footer p{
 aside{
 grid-area: aside;
 }
+
 .container1 { /*for index.html*/
   display: grid;
   grid-template-columns:auto 1fr;
@@ -78,5 +79,6 @@ grid-area: aside;
   grid-template-areas:
     "header header"
     "nav main"
+    "aside"
     "footer footer";
     }

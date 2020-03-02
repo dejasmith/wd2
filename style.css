@@ -109,6 +109,43 @@ aside h2{
   color:navy;
 }
 
+article {
+  background:rgba(0,0,0,.2);
+  padding:5px;
+text-align:center;
+}
+
+.top{
+  grid-area: top;
+  color:navy;
+  text-align:center;
+}
+
+.middle{
+  grid-area: middle;
+    color:navy;
+  text-align:center;
+}
+
+.bottom{
+  grid-area: bottom;
+  color:navy;
+  text-align:center;
+}
+.travel {
+  margin:auto;
+}
+
+figure{
+  margin:0;
+  text-align:center;
+}
+
+figcaption{
+  padding:5px;
+  color:navy;
+  font-weight:bold;
+}
 /*-----------------------Phone Media Query------------------------*/
 .container1 { /*for index.html*/
   display: grid;
@@ -122,6 +159,37 @@ aside h2{
     "aside"
     "footer";
     }
+    
+        @media only screen and (min-width: 479px)  {
+    .container2 { /*for blog.html*/
+  display: grid;
+  grid-template-columns:100%;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "top"
+    "middle"
+    "bottom"
+    "footer";
+    }
+    
+     @media only screen and (min-width: 479px)  {
+    .container3 { /*for special.html*/
+  display: grid;
+  grid-template-columns:100%;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    ".fig2"
+    "footer";
+    }
+    
 
 /*This stuff is for the hamburger menu*/
 .toggleNav {
@@ -160,7 +228,32 @@ aside h2{
     "aside aside"
     "footer footer";
     }
-
+    
+    @media only screen and (min-width: 480px)  {
+.container2 { /*for blog.html*/
+  grid-template-columns:auto 1fr;
+  grid-template-areas:
+    "header header"
+    "top top"
+    "middle middle"
+    "bottom bottom"
+    "footer footer";
+    }
+    
+     @media only screen and (min-width: 480px)  {
+    .container3 {/*for special.html*/
+     grid-template-columns:auto 1fr;
+  grid-template-areas:
+"header header"
+"nav main"
+"fig2 fig2"
+"footer footer";
+.nestedgrid layout:
+"section"
+"fig1";
+".fig2 .fig2"
+"footer footer"
+}
 
 /* Below will change from hamburger menu to side navigation*/
   
@@ -192,3 +285,26 @@ aside h2{
     }
 
 	}
+	
+@media only screen and (min-width: 960px)  {
+.container2 { /*for index.html*/
+  grid-template-columns:auto 1fr 1.5fr;
+  grid-template-areas:
+    "header header header"
+    "nav main top"
+    "nav main middle"
+    "nav main bottom"
+    "footer footer footer";
+    }
+
+	}
+	
+	 @media only screen and (min-width: 960px)  {
+	   .container3 { /*for special.html*/
+  grid-template-columns:auto 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav section .fig1"
+    "nav main bottom"
+    "footer footer footer";
+    }

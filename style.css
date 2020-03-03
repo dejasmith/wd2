@@ -146,6 +146,7 @@ figcaption{
   color:navy;
   font-weight:bold;
 }
+
 /*-----------------------Phone Media Query------------------------*/
 .container1 { /*for index.html*/
   display: grid;
@@ -248,11 +249,13 @@ figcaption{
 "nav main"
 "fig2 fig2"
 "footer footer";
-.nestedgrid layout:
+
+.nestedgrid:
+display:grid;
+grid-template-columns:100%;
+grid-template-areas:
 "section"
 "fig1";
-".fig2 .fig2"
-"footer footer"
 }
 
 /* Below will change from hamburger menu to side navigation*/
@@ -287,7 +290,7 @@ figcaption{
 	}
 	
 @media only screen and (min-width: 960px)  {
-.container2 { /*for blog.html*/
+.container2 { /*for index.html*/
   grid-template-columns:auto 1fr 1.5fr;
   grid-template-areas:
     "header header header"

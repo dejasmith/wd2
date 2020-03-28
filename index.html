@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
  <body>
-  <div class="container1">
+  <div class="container4">
     <header>
         <h1>Let's Travel the World!</h1>
         <h3>It's the Journey AND the Destination</h3>
@@ -25,26 +25,37 @@
 </ul>
 </nav>
 
-    <main>
-        <h2>This Month's Destination: The White House</h2>
-        <p>Ask anyone who has taken a tour of the White House and they will likely tell you that it was one of the most memorable tours they have been on. There is so much to see: the architecture, the gardens, the decorations, and the art!</p>
 
-        <p>Recognizing that not everyone can afford a trip to our nation's capital, a team from Google recently created a virtual tour of the White House and included high resolution images of the artwork. Listen to some of the members who worked on the project:</p>
-        <div class="audio">
-        <audio controls preload="metadata">
-  <source src="whitehouse.mp3" type="audio/mp3">
-  <p> <a href="whitehouse.mp3">link to the audio</a></p>
-</audio>
-</div>
-        <p>And here is a video of Michelle Obama describing the virtual tour:</p>
-        <div class="video">
-        <video controls width="400" height="400" poster="firstlady.jpg"  preload="metadata">
-  <source src="whitehouse.mp4" type="video/mp4">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="whitehouse.mp4">link to the video</a> instead.</p>
-</video>
-</div>
-        <p>Although this is a great resource to virtually explore the White House, there's still nothing quite like being there in person. By visiting our nation's capital, we can gain a deeper understanding and appreciation of our nation and its fascinating history. Be sure to check out our monthly special page, where trips to Washington DC begin at <s>$799</s> $699.</p>
+    <main>
+        <h2>Contact Us</h2>
+       <p>Use this form to allow us to get in touch with you within 1 business day!</p>
+       <p>*= Required Field</p>
+       <form>
+         <p>Tell us about yourself:</p>
+         Name: <input type="text" size="30" name="fullname" placeholder="deja smith" autofocus required spellcheck="false" autocomplete="off"><br>
+         Email:<input type="email" size="30" name="email"><br>
+         Phone:<input type="tel" size="20" name="phone"><br>
+        Personal Website:<input type="url text email tel" size="15" name="website"><br>
+         Next destination: <input type="text" list="vaca"><br>
+         <datalist id="vaca">
+           <option value="Beijing">
+           <option value="Lisbon">
+           <option value="Paris">
+           <option value="Sydney">
+           <option value="Tokyo">
+           <option value="Washington D.C">
+           </datalist>
+           Expected Date of Departure:<input type="date" size="15" name="dob" ><br>
+           number of nights on trip: <input type="number of days on trip" min="1" max= "8" step="1" value="25" size="5" name="number of days on trip"  ><br>
+                      <input type= "submit" value= "Help Me Book My Trip" class=  "button">
+       </form>
     </main>
+    <div1>
+      <p>OR CALL US</p>
+    </div1>
+    <div2>
+     <p> 1-888-TRAVEL1</p>
+    </div2>
    
     <footer>
         <p> &copy; Travel The World LLC</p>

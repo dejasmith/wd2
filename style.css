@@ -147,18 +147,67 @@ figcaption{
   font-weight:bold;
 }
 
-.video, .audio {
-    margin:0;
-    display: grid;  /*This needs to be set or it won't center*/
-    justify-content:space-around;
+form {
+    background-color:darkseagreen;
+    width:90%;
+    margin:auto;
+    color:white;
+    padding:10px;
 }
 
-.audio {
- max-width: 100%;
+input {
+  margin: 1px 0 10px 0;
 }
-.video {
-  max-width:  100%;
-  height:auto;
+
+.call {
+    color:navy;
+    text-align:center;
+    font-size:2em;
+    background-color:darkseagreen;
+    width:60%;
+    padding: 5px 0 0 0;
+    margin:10px auto 0 auto;
+    cursor:pointer;
+}
+
+.phone{
+    color:darkseagreen;
+    background-color:navy;
+    padding:5px;
+    text-align:center;
+    font-size:.75em;
+}
+
+.div1{
+  width:90%;
+}
+
+.div2{
+  width:60%;
+}
+
+button{
+  padding:5px;
+  color:lightseagreen;
+  background-color:navy;
+}
+
+.call {
+    color:navy;
+    text-align:center;
+    font-size:2em;
+    background-color:darkseagreen;
+    width:60%;
+    padding: 5px 0 0 0;
+    margin:10px auto 0 auto;
+    cursor:pointer;
+}
+.phone{
+    color:darkseagreen;
+    background-color:navy;
+    padding:5px;
+    text-align:center;
+    font-size:.75em;
 }
 /*-----------------------Phone Media Query------------------------*/
 .container1 { /*for index.html*/
@@ -205,7 +254,7 @@ figcaption{
     }
     
  @media only screen and (min-width: 479px)  {
-    .container4 { /*for destination.html*/
+    .container4 { /*for contact.html*/
   display: grid;
   grid-template-columns:100%;
   grid-gap:.5em;
@@ -283,7 +332,7 @@ grid-template-areas:
 "fig1";
 }
  @media only screen and (min-width: 479px)  {
-    .container4 { /*for destination.html*/
+    .container4 { /*for contact.html*/
   display: grid;
   grid-template-columns:auto 1fr;
   grid-gap:.5em;
@@ -293,6 +342,13 @@ grid-template-areas:
     "nav main"
     "footer footer";
     }
+    .nestedgrid2:
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+".div1"
+".div2";
+}
     
 /* Below will change from hamburger menu to side navigation*/
   
@@ -348,7 +404,7 @@ grid-template-areas:
     "footer footer footer";
     }
      @media only screen and (min-width: 479px)  {
-    .container4 { /*for destination.html*/
+    .container4 { /*for contact.html*/
   display: grid;
   grid-template-columns:auto 1fr;
   grid-gap:.5em;
@@ -359,3 +415,9 @@ grid-template-areas:
     "footer footer";
     }
     
+    .nestedgrid2:
+display:grid;
+grid-template-columns:1fr;
+grid-template-areas:
+".div1 .div2";
+}

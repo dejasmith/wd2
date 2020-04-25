@@ -91,22 +91,27 @@ aside {
   background:rgba(0,0,0,.2);
   padding:5px;
 }
-    
-aside ul {
-}
 
-aside li {
-  color:navy;
-  padding:10px 5px;
-  }
 
 aside a {
   color:white;
+  padding:0 5px;
   
 }
 
 aside h2{
+  color:blue;
+  padding:0 5px;
+  text-align:center;
+}
+
+aside hover{
   color:navy;
+}
+
+aside li{
+  color:navy;
+  padding:10px 0;
 }
 
 article {
@@ -116,37 +121,72 @@ text-align:center;
 }
 
 .top{
-  grid-area: top;
-  color:navy;
-  text-align:center;
+grid-area:top;
 }
-
+.top h2{
+color: navy;
+text-align:center;
+}
+.top p{
+color: white;
+}
 .middle{
-  grid-area: middle;
-    color:navy;
-  text-align:center;
+grid-area:middle;
 }
-
+.middle h2{
+color: navy;
+text-align: center;
+}
+.middle p{
+color: white;
+}
 .bottom{
-  grid-area: bottom;
-  color:navy;
-  text-align:center;
+grid-area:bottom;
 }
-.travel {
-  margin:auto;
+.bottom h2{
+color: navy;
+text-align: center;
 }
-
+.bottom p{
+color: white;
+}
+main img{
+margin: auto;
+}
 figure{
-  margin:0;
-  text-align:center;
+margin:0;
+text-align:center;
+background:rgba(0,0,0,.2);
 }
-
 figcaption{
-  padding:5px;
-  color:navy;
-  font-weight:bold;
+padding:5px;
+color:navy;
+font-weight:bold;
 }
-
+figure img{
+padding-top:10px;
+}
+section{
+grid-area:section;
+}
+.fig1{
+grid-area:fig1;
+}
+.fig2{
+grid-area:fig2;
+}
+audio {
+ max-width: 100%;
+}
+video {
+  max-width:  100%;
+  height:auto;
+}
+.video, .audio {
+    margin:0;
+    display: grid;  /*This needs to be set or it won't center*/
+    justify-content:space-around;
+}
 form {
     background-color:darkseagreen;
     width:90%;
@@ -154,62 +194,40 @@ form {
     color:white;
     padding:10px;
 }
+.div1 {
+grid-area:div1;
+}
+.div2 {
+grid-area:div2;
+}
+.call {
+    color:navy;
+    text-align:center;
+    font-size:2em;
+    background-color:darkseagreen;
+    width:60%;
+    padding: 5px 0 0 0;
+    margin:10px auto 0 auto;
+    cursor:pointer;
+}
 
+.phone{
+    color:darkseagreen;
+    background-color:navy;
+    padding:5px;
+    text-align:center;
+    font-size:.75em;
+}
+.button {
+   background-color:navy;
+   color: lightseagreen;
+   padding: 5px 0 0 0;
+}
 input {
   margin: 1px 0 10px 0;
 }
 
-.call {
-    color:navy;
-    text-align:center;
-    font-size:2em;
-    background-color:darkseagreen;
-    width:60%;
-    padding: 5px 0 0 0;
-    margin:10px auto 0 auto;
-    cursor:pointer;
-}
-
-.phone{
-    color:darkseagreen;
-    background-color:navy;
-    padding:5px;
-    text-align:center;
-    font-size:.75em;
-}
-
-.div1{
-  width:90%;
-}
-
-.div2{
-  width:60%;
-}
-
-button{
-  padding:5px;
-  color:lightseagreen;
-  background-color:navy;
-}
-
-.call {
-    color:navy;
-    text-align:center;
-    font-size:2em;
-    background-color:darkseagreen;
-    width:60%;
-    padding: 5px 0 0 0;
-    margin:10px auto 0 auto;
-    cursor:pointer;
-}
-.phone{
-    color:darkseagreen;
-    background-color:navy;
-    padding:5px;
-    text-align:center;
-    font-size:.75em;
-}
-/*-----------------------Phone Media Query------------------------*/
+/*---------------------------Mobile Layout Styles----------------------------*/
 .container1 { /*for index.html*/
   display: grid;
   grid-template-columns:100%;
@@ -222,9 +240,7 @@ button{
     "aside"
     "footer";
     }
-    
-        @media only screen and (min-width: 479px)  {
-    .container2 { /*for blog.html*/
+.container2 { /*for blog.html*/
   display: grid;
   grid-template-columns:100%;
   grid-gap:.5em;
@@ -238,9 +254,7 @@ button{
     "bottom"
     "footer";
     }
-    
-     @media only screen and (min-width: 479px)  {
-    .container3 { /*for special.html*/
+.container3 { /*for blog.html*/
   display: grid;
   grid-template-columns:100%;
   grid-gap:.5em;
@@ -249,12 +263,10 @@ button{
     "header"
     "nav"
     "main"
-    ".fig2"
+    "fig2"
     "footer";
     }
-    
- @media only screen and (min-width: 479px)  {
-    .container4 { /*for contact.html*/
+.container4 { /*for blog.html*/
   display: grid;
   grid-template-columns:100%;
   grid-gap:.5em;
@@ -265,7 +277,19 @@ button{
     "main"
     "footer";
     }
-    
+.nestedgrid{
+display:grid;
+grid-template-areas:
+"section"
+"fig1";
+}
+.nestedgrid2 {
+display:grid;
+grid-template-areas:
+"div1"
+"div2";
+}
+
 
 /*This stuff is for the hamburger menu*/
 .toggleNav {
@@ -293,7 +317,6 @@ button{
     padding-top:10px;
     }
 
-
 /*-----------------------Tablet Media Query------------------------*/
 @media only screen and (min-width: 480px)  {
 .container1 { /*for index.html*/
@@ -304,52 +327,44 @@ button{
     "aside aside"
     "footer footer";
     }
-    
-    @media only screen and (min-width: 480px)  {
-.container2 { /*for blog.html*/
+.container2 { /*for index.html*/
   grid-template-columns:auto 1fr;
   grid-template-areas:
     "header header"
+    "nav main"
     "top top"
     "middle middle"
     "bottom bottom"
     "footer footer";
     }
-    
-     @media only screen and (min-width: 480px)  {
-    .container3 {/*for special.html*/
-     grid-template-columns:auto 1fr;
-  grid-template-areas:
-"header header"
-"nav main"
-"footer footer";
-
-.nestedgrid:
-display:grid;
-grid-template-columns:100%;
-grid-template-areas:
-"section"
-"fig1";
-}
- @media only screen and (min-width: 479px)  {
-    .container4 { /*for contact.html*/
-  display: grid;
+.container3 { /*for index.html*/
   grid-template-columns:auto 1fr;
-  grid-gap:.5em;
-  margin:1%;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "fig2 fig2"
+    "footer footer";
+}
+.container4 { /*for index.html*/
+  grid-template-columns:auto 1fr;
   grid-template-areas:
     "header header"
     "nav main"
     "footer footer";
-    }
-    .nestedgrid2:
-display:grid;
-grid-template-columns:1fr;
-grid-template-areas:
-".div1"
-".div2";
 }
-    
+ .nestedgrid{
+display:grid;
+grid-template-areas:
+"section"
+"fig1";
+}
+.nestedgrid2 {
+display:grid;
+grid-template-areas:
+"div1"
+"div2";
+}
+
 /* Below will change from hamburger menu to side navigation*/
   
 .toggleNav {
@@ -370,18 +385,15 @@ grid-template-areas:
 
 /*-----------------------Desktop Media Query------------------------*/
 @media only screen and (min-width: 960px)  {
-
 .container1 { /*for index.html*/
-  grid-template-columns:auto 1fr 25%;
+  grid-template-columns:auto 1fr;
   grid-template-areas:
     "header header header"
     "nav main aside"
     "footer footer footer";
     }
-
-	}
 	
-@media only screen and (min-width: 960px)  {
+
 .container2 { /*for index.html*/
   grid-template-columns:auto 1fr 1.5fr;
   grid-template-areas:
@@ -390,34 +402,31 @@ grid-template-areas:
     "nav main middle"
     "nav main bottom"
     "footer footer footer";
-    }
-
-	}
-	
-	 @media only screen and (min-width: 960px)  {
-	   .container3 { /*for special.html*/
+}
+.container3 { /*for index.html*/
   grid-template-columns:auto 1fr;
   grid-template-areas:
-    "header header header"
-    "nav section .fig1"
-    "nav main bottom"
-    "footer footer footer";
+    "header header"
+    "nav main"
+    "fig2 fig2"
+    "footer footer";
+}
+.nestedgrid{
+display:grid;
+grid-template-areas:
+"section fig1";
     }
-     @media only screen and (min-width: 479px)  {
-    .container4 { /*for contact.html*/
-  display: grid;
+.container4 { /*for index.html*/
   grid-template-columns:auto 1fr;
-  grid-gap:.5em;
-  margin:1%;
   grid-template-areas:
     "header header"
     "nav main"
     "footer footer";
-    }
-    
-    .nestedgrid2:
+}
+.nestedgrid2{
 display:grid;
-grid-template-columns:1fr;
 grid-template-areas:
-".div1 .div2";
+"div1 div2";
+    }
+
 }
